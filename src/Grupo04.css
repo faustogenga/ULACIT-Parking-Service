@@ -1,14 +1,6 @@
 /* Hoja de estilos principal*/
 
 @font-face {
-  font-family: 'Open Sans', sans-serif;
-  src: url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap');   
-}
-@font-face {
-    font-family: 'IM Fell French Canon Pro';
-    src: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/im-fell-french-canon-pro.woff2') format('woff2');
-    }
-@font-face {
   font-family: ZonaProBOLD;
   src: url(../fonts/ZonaPro-Bold.otf);
 }
@@ -18,28 +10,26 @@
 }
 
 
-
 body {
   margin: 0;
 }
 
-header { 
+.front { 
 	background-image: url(../img/cielo.jpg);
   background-repeat: no-repeat;
   background-size: 100% 100%;
-  padding-bottom: 30%;
-  font-family: ZonaProBOLD
+  font-family: ZonaProBOLD;
+  position: relative;
 }
 
-header img {
-	position: absolute;
-	top: 0;
-	right: 0;
+.front img{
+	position: relative;
 	width: 100%;
-
+  margin-bottom: -1%;
 }
-header h1 { 
-	position:fixed;
+
+.front h1 { 
+	position: fixed;
   right: 26%;
   font-size: 6vw;
   line-height: .8;
@@ -47,17 +37,16 @@ header h1 {
   color: #502F5D;
 }
 
-header h1 span {
+.front h1 span{
   font-family: ZonaPro;
   display: block;
   font-size: 3vw;
 }
+
 main { 
-  background: #fff;
   position: relative;
-  border: 1px solid #fff;
-  font-family: 'IM Fell French Canon Pro';
+  padding-top: 10%;
+  background: #fff;
   font-size: 1.4rem;
-  padding: 2rem 25%;
   line-height: 1.6;
 }
