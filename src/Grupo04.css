@@ -1,5 +1,6 @@
 /* Hoja de estilos principal*/
 
+/*fonts*/
 @font-face {
   font-family: ZonaProBOLD;
   src: url(../fonts/ZonaPro-Bold.otf);
@@ -9,25 +10,52 @@
   src: url(../fonts/ZonaPro-ExtraLight.otf);
 }
 
+/*header*/
 
-body {
-  margin: 0;
+/*background*/
+.topmenu {
+  background-color: #31003F;
+  overflow: hidden;
 }
-
+/*navigation bar */
+.topmenu a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  font-family: ZonaPro;
+  padding: 25px 16px;
+  text-decoration: none;
+  font-size: 15px;
+}
+/*hover */
+.topmenu a:hover {
+  background-color: #dddddd;
+  color: #31003F;
+  font-weight:700;
+}
+/*home activado */
+.topmenu a.home {
+  background-color: #de8518;
+  color: white;
+}
+.borde {
+  position: relative;
+  width: 100%;
+  height: 2px;
+  background-color: #de8518;
+}
+/*imagen ulacit*/
 .front { 
 	background-image: url(../img/cielo.jpg);
   background-repeat: no-repeat;
   background-size: 100% 100%;
   font-family: ZonaProBOLD;
-  position: relative;
 }
-
 .front img{
 	position: relative;
 	width: 100%;
   margin-bottom: -1%;
 }
-
 .front h1 { 
 	position: fixed;
   right: 26%;
@@ -36,17 +64,109 @@ body {
   text-align: center;
   color: #502F5D;
 }
-
 .front h1 span{
   font-family: ZonaPro;
   display: block;
   font-size: 3vw;
 }
 
-main { 
-  position: relative;
-  padding-top: 10%;
+body {
+  margin: auto;
+}
+/*texto*/ 
+main {
+  text-align: center;
+  position: relative; 
+  padding: 2% 2%;
   background: #fff;
   font-size: 1.4rem;
   line-height: 1.6;
+}
+.reserva {
+  color: white;
+  padding: 15px 50px;
+  background-color: #008A85;
+  border: none;
+  border-radius: 2px;
+  text-decoration: none;
+  font-family: ZonaPro;
+  transition-duration: 0.4s;
+}
+
+.reserva:hover {
+  background-color: #09bdb7;
+}
+
+.row {
+  text-align: center;
+  display: flex;
+}
+
+.contenedor_caja {
+  width: 100%;
+  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -15px;
+  margin-left: -15px;
+}
+
+.caja {
+  margin: 30px auto;
+  background-color: #de8518;
+  width: 200px;
+  height: 200px;
+}
+
+
+.contenedor_imagen{
+  margin: 100px auto;
+  left: -50px;
+  width: 500px;
+  position: relative;
+  overflow: hidden;
+  border: 10px solid #31003F;
+  border-radius: 8px;
+}
+
+/*Area of images*/
+.wrapper{
+  width: 100%;
+  display: flex;
+  animation: slide 16s infinite;
+}
+
+.slideshow {
+  width: 100%;
+}
+/*Animation activated by keyframes*/
+@keyframes slide{
+  0%{
+      transform: translateX(0);
+  }
+  20%{
+      transform: translateX(0);
+  }
+  25%{
+      transform: translateX(-100%);
+  }
+  45%{
+    transform: translateX(-100%);
+  }
+  50%{
+      transform: translateX(-200%);
+  }
+  70%{
+    transform: translateX(-200%);
+  }
+  75%{
+    transform: translateX(-300%);
+  }
+  100%{
+    transform: translateX(-300%);
+  }
+}
+
+.informacion {
+  margin: auto;
 }
