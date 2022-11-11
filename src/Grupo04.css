@@ -23,7 +23,7 @@
   color: #f2f2f2;
   text-align: center;
   font-family: ZonaPro;
-  padding: 25px 16px;
+  padding: 1% 1%;
   text-decoration: none;
   font-size: 15px;
 }
@@ -84,12 +84,14 @@ main {
 }
 .reserva {
   color: white;
-  padding: 15px 50px;
+  padding: 20px 60px;
   background-color: #008A85;
   border: none;
   border-radius: 2px;
   text-decoration: none;
   font-family: ZonaPro;
+  font-size: 20px;
+  font-weight: bold;
   transition-duration: 0.4s;
 }
 
@@ -98,7 +100,6 @@ main {
 }
 
 .row {
-  text-align: center;
   display: flex;
 }
 
@@ -120,12 +121,12 @@ main {
 
 
 .contenedor_imagen{
-  margin: 100px auto;
-  left: -50px;
-  width: 500px;
+  margin: auto;
+  margin-top: 5%;
+  width: 40%;
   position: relative;
   overflow: hidden;
-  border: 10px solid #31003F;
+  border: 10px solid #502F5D;
   border-radius: 8px;
 }
 
@@ -167,6 +168,52 @@ main {
   }
 }
 
-.informacion {
-  margin: auto;
+.informacion{
+  width: 50%;
+  margin: 3% 1% 1% 5%;
+}
+.informacion h1{
+  font-size: 40px;
+  font-weight: 200;
+  width: 100%;
+  color: white;
+  background-color: #502F5D;
+  border: 5px solid #8B127D;
+}
+
+.informacion_contenido {
+  display: flex;
+  width: 100%;
+}
+
+
+.informacion_contenido_texto {
+  margin-left: 1%;
+  width: 80%;
+}
+
+.informacion_contenido_texto * {
+  margin: 4% 0%;
+}
+
+.informacion_contenido_texto h3{
+  text-align: left;
+  font-size: 27px;
+}
+.informacion_contenido_texto p{
+  text-align: left;
+  color: rgb(77, 77, 77);
+  font-size: 22px;
+}
+
+.informacion_contenido_icono_parqueo{
+  width: 20%;
+  position: relative;
+}
+.informacion_contenido_icono_parqueo img{
+  position: absolute;
+  width: 100%;
+  left: 0%;
+  bottom: 0%;
+  opacity: 0.8;
 }
