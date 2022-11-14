@@ -193,7 +193,7 @@ main {
 }
 
 .informacion_contenido_texto * {
-  margin: 4% 0%;
+  margin: 2% 0%;
 }
 
 .informacion_contenido_texto h3{
@@ -201,6 +201,7 @@ main {
   font-size: 27px;
 }
 .informacion_contenido_texto p{
+  margin-left: 1%;
   text-align: left;
   color: rgb(77, 77, 77);
   font-size: 22px;
