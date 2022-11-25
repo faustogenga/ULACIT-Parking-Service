@@ -60,7 +60,7 @@
   width: 100%;
 }
 .front img{
-	position: relative;
+  position: relative;
 	width: 100%;
   margin-bottom: -1%;
 }
@@ -81,28 +81,26 @@ body {
 }
 /*texto*/ 
 main {
+  padding: 2% 2%;
   text-align: center;
   position: relative; 
-  padding: 2% 2%;
   background: #fff;
-  font-size: 1.4rem;
-  line-height: 1.6;
 }
-.reserva {
-  width: 100%;
+.reserva_button {
+  position: relative;
+  margin: auto;
   color: white;
   padding: 1.5% 6%;
   background-color: #008A85;
-  border: none;
   border-radius: 8px;
   text-decoration: none;
   font-family: ZonaPro;
-  font-size: 20px;
+  font-size: 1.5vw;
   font-weight: bold;
   transition-duration: 0.4s;
 }
 
-.reserva:hover {
+.reserva_button:hover {
   background-color: #09bdb7;
 }
 
@@ -126,7 +124,8 @@ main {
   position: relative;
   overflow: hidden;
   border: 10px solid #502F5D;
-  border-radius: 5px;
+  border-radius: 8px;
+  box-shadow: -1px 1px 5px #502F5D;
 }
 
 /*Area of images*/
@@ -252,15 +251,14 @@ input[type=text] {
   color: white;
 }
 
-
-input[type=checkbox]
-{
+.submit {
+  text-align: left;
 }
 
 input[type=submit] {
-  width: 90%;
+  float: left;
+  width: 10%;
   padding: 15px;
-  margin: 10px 0;
   background-color: #18e7f2;
   color: white;
   border: none;
