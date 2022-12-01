@@ -227,9 +227,9 @@ main {
 .newsletter {
   text-align: left;
   margin-top: 2%;
-  padding-bottom: 8%;
-  background-color: #8B127D;
-  border: 5px solid #c9afc6;
+  padding-bottom: 11%;
+  background-color: #502F5D;
+  border: 5px solid #8B127D;
   width: 100%;
 }
 
@@ -238,6 +238,10 @@ main {
   font-family: ZonaPro;
   text-align: left;
   margin: 1% 2%;
+}
+.form_container {
+  float: left;
+  width: 100%;
 }
 
 input[type=text] {
@@ -257,17 +261,39 @@ input[type=text] {
 }
 
 .submit {
+  float: left;
   text-align: left;
+  width: 100%;
 }
 
 input[type=submit] {
+  margin: 1% 2%;
   float: left;
-  width: 10%;
-  padding: 15px;
+  width: 20%;
+  padding: 1vw;
   background-color: #18e7f2;
   color: white;
   border: none;
+  border-radius: 8px;
+  opacity: 0.9;
 }
+
+input[type=submit]:hover {
+  opacity: 1;
+}
+
+input[type=checkbox] {
+  transform: scale(1.5);
+  padding: 10px;
+  margin-left: 2%;
+}
+
+.form_container label span {
+  font-family: ZonaPro;
+  font-size: 1vw;
+  color: white;
+}
+
 
 .aboutContainer{
   background-image: url(../img/Ulacit_Campus.jpg);
