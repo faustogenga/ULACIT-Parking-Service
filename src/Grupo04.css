@@ -17,12 +17,11 @@
 
 /*header*/
 
-/*background*/
+/*Navigation bar*/
 .topmenu {
   background-color: #31003F;
   overflow: hidden;
 }
-/*navigation bar */
 .topmenu a {
   float: left;
   color: #f2f2f2;
@@ -56,7 +55,10 @@
   height: 2px;
   background-color: #de8518;
 }
-/*imagen ulacit*/
+
+/*FRENTE Parqueo ULACIT
+* Imagenes de fondo
+*/
 .front { 
 	background-image: url(../img/cielo.jpg);
   background-repeat: no-repeat;

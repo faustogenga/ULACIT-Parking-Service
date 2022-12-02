@@ -1,0 +1,144 @@
+
+/*fonts*/
+@font-face {
+    font-family: ZonaProBOLD;
+    src: url(../fonts/ZonaPro-Bold.otf);
+  }
+  @font-face {
+    font-family: ZonaPro;
+    src: url(../fonts/ZonaPro-ExtraLight.otf);
+  }
+  
+  @font-face {
+    font-family: socialMedia;
+    src: url(../fonts/SocialMediaIcons.ttf);
+  }
+  
+  .topmenu {
+    background-color: #31003F;
+    overflow: hidden;
+  }
+  .topmenu a {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    font-family: ZonaPro;
+    padding: 1% 1%;
+    text-decoration: none;
+    font-size: 15px;
+    transition-duration: 0.7s;
+  }
+  /*hover */
+  .topmenu a:hover {
+    background-color: #dddddd;
+    color: #31003F;
+    font-weight:700;
+  }
+  /*home activado */
+  .topmenu a.home {
+    background-color: #de8518;
+    color: white;
+  }
+  .logo_ulacit {
+    float: right;
+    margin: 0.1% 2%;
+    width: 9%;
+  }
+  
+  .borde {
+    position: relative;
+    width: 100%;
+    height: 2px;
+    background-color: #de8518;
+  }
+  body {
+    margin: auto;
+  }
+  /* Fondo*/    
+  
+  .aboutContainer{
+    background-image: url(../img/Ulacit_Campus.jpg);
+    background-size: cover;
+    position: relative;
+    width: 100%;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    
+  }
+  /* Tabla */
+  table{
+    margin: auto;
+    width: 80%; 
+    border-collapse: collapse;
+  }
+  
+  #tableHead{
+    text-align: center;
+    font-family: ZonaPro;
+    font-size: 30px;
+    font-weight: 700;
+  }
+  
+  table tr:nth-child(even){
+    background-color: #31003fe4; 
+    font-weight: 900;
+  }
+  table tr:nth-child(odd){
+    background-color: #502f5deb;
+    font-weight: 500;
+    
+  }
+
+  table tr td {
+    font-family: ZonaPro;
+    padding: 15px;
+    text-align: left;
+    color: #dddddd;
+  }
+  
+  .footer{
+      position: relative;
+      display: inline-flex;
+      background-color: #31003F;
+      width: 100%;
+      display: flex;  
+      justify-content: center;
+      padding-top: 5px;
+      padding-bottom: 5px;
+      font-family: ZonaPro;
+  }
+  .footer div{
+    width:  10%;
+    margin: 5px;
+    padding: 10px;
+  }
+  .footer div h3{
+    text-align: center;
+    color: #dddddd;
+    font-weight: 900;
+  }
+  .footer ul{
+    list-style: none;
+    margin-left: -45px;
+    color: #dddddd;
+  }
+  .footer ul li {
+    margin-bottom: 10px;
+  }
+  .footer ul li p{
+    display: inline-flex;
+    margin: 2px;
+  }
+  .footer ul li a{
+    color: #dddddd;
+    text-decoration: none;
+  }
+  .footer ul li a:hover{
+    font-weight: bolder;
+  }
+  .icons{
+    font-family: socialMedia;
+  }
+
+
+  
