@@ -31,6 +31,7 @@
   padding: 1% 1%;
   text-decoration: none;
   font-size: 15px;
+  transition-duration: 0.7s;
 }
 /*hover */
 .topmenu a:hover {
@@ -176,8 +177,9 @@ main {
   margin: 3% 1% 1% 5%;
 }
 .informacion h1{
+  padding: 1% 1%;
   font-family: ZonaPro;
-  font-size: 40px;
+  font-size: 35px;
   font-weight: 800;
   width: 100%;
   color: white;
@@ -271,15 +273,18 @@ input[type=submit] {
   float: left;
   width: 20%;
   padding: 1vw;
-  background-color: #18e7f2;
+  background-color: #008A85;
   color: white;
   border: none;
   border-radius: 8px;
-  opacity: 0.9;
+  opacity: 1;
+  font-weight: bold;
+  transition-duration: 0.4s;
 }
 
 input[type=submit]:hover {
-  opacity: 1;
+
+  background-color: #09bdb7;
 }
 
 input[type=checkbox] {
@@ -334,7 +339,7 @@ table tr td {
   color: #dddddd;
 
 }
-.botDiv{
+.footer{
     position: relative;
     display: inline-flex;
     background-color: #31003F;
@@ -343,32 +348,36 @@ table tr td {
     justify-content: center;
     padding-top: 5px;
     padding-bottom: 5px;
+    font-family: ZonaPro;
 }
-.botDiv div{
+.footer div{
   width:  10%;
   margin: 5px;
   padding: 10px;
 }
-.botDiv div h3{
+.footer div h3{
   text-align: center;
   color: #dddddd;
   font-weight: 900;
 }
-.botDiv ul{
+.footer ul{
   list-style: none;
   margin-left: -45px;
   color: #dddddd;
 }
-.botDiv ul li {
+.footer ul li {
   margin-bottom: 10px;
 }
-.botDiv ul li p{
+.footer ul li p{
   display: inline-flex;
   margin: 2px;
 }
-.botDiv ul li a{
+.footer ul li a{
   color: #dddddd;
   text-decoration: none;
+}
+.footer ul li a:hover{
+  font-weight: bolder;
 }
 .icons{
   font-family: socialMedia;
