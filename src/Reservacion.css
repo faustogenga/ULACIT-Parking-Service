@@ -75,23 +75,25 @@
   
   .reservacion {
     float:  right;
-    width: 40%;
+    width: 50%;
     height: 100%;
   }
   
   .reservacion form {
     text-align: center;
     width: 90%;
-    margin: 5% 5%;
+    margin: 7% 1%;
     background-color: #1e4daaf1;
-    border-radius: 3px;
+    border-radius: 10px;
   }
+
   .reservacion .form-group {
     text-align: center;
     position: relative;
     display: flex;
-    margin: 5%;
-    height: 60px;
+    margin: 0% 5%;
+    margin-bottom: 3%;
+    height: 80px;
   }
 
   .reservacion .form-inputs{
@@ -109,7 +111,7 @@
   }
   .reservacion .form-label {
     position: relative;
-    font-family: zonapro;
+    font-family: zonaproBOLD;
     margin-bottom: 5px;
     color: #fff;
     font-size: 12px;
@@ -124,7 +126,7 @@
     margin-right: 10px;
     background-color: #f5f5f5;
     border: none;
-    height: 100%;
+    height: 80%;
     width: 100%;
     border-radius: 3px;
     -webkit-box-shadow: none;
@@ -135,13 +137,19 @@
   
   
   .reservacion .submit-btn {
-    color: #101113;
+    font-family: zonaProBOLD;
+    margin-bottom: 15px;
+    color: #101113e2;
     background-color: #ffc001;
     font-weight: 700;
     height: 50px;
     border: none;
     width: 50%;
-    display: block;
     border-radius: 3px;
     text-transform: uppercase;
+  }
+
+  .reservacion .submit-btn:hover {
+    background-color: #eda64e;
+    color: #fff;
   }
