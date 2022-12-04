@@ -1,94 +1,122 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="Stylesheet" href="Reservacion.css">
     <title>Reservaciones</title>
 </head>
 
 <header>
     <div class="topmenu">
-      <a class="home" href="../Grupo04.html">Home</a>
-      <a href="https://www.ulacit.ac.cr/" target="_blank">ULACIT</a>
-      <a href="contacto.html">Contact</a>
-      <a href="about.html">Estacionamiento</a>
-      <img class="logo_ulacit" src="../img/logo_ulacit.png" alt="Logo ULACIT">
+        <a class="home" href="../Grupo04.html">Inicio</a>
+        <a href="https://www.ulacit.ac.cr/" target="_blank">ULACIT</a>
+        <a href="Contacto.html">Contacto</a>
+        <a href="Preguntas.html">Preguntas Frecuentes</a>
+        <a href="Reservacion.html">Reservacion</a>
+        <img class="logo_ulacit" src="../img/logo_ulacit.png" alt="Logo ULACIT">
     </div>
     <div class="borde">
     </div>
-  </header>
+</header>
 
 <body>
-    
-    <div class="aboutContainer">    
-        <table>
-            <tr>
-                <td id="tableHead"> <b>Preguntas Frecuentes</b> </td>
-            </tr>
-            <tr>
-                <td >¿Cuántos espacios puedo reservar por usuario?</td>            
-            </tr>
-            <tr>
-                <td  >-Solo se permite reservar un espacio por usuario.</td>            
-            </tr>
-            <tr>
-                <td  >¿Puedo reservar todos los espacios que necesite durante la semana?</td>            
-            </tr>
-            <tr>
-                <td >-La reservación se habilita sólo si no existe una solicitud previa por parte de su usuario.</td>            
-            </tr>
-            <tr>
-                <td >¿Qué pasa si no llego a la hora exacta de reservación?</td>            
-            </tr>
-            <tr>
-                <td >- Si 20 minutos después el espacio no se ha reclamado, el sistema está diseñado para que se habilite el espacio para otro usuario.</td>            
-            </tr>
-            <tr>
-                <td >¿En qué momento puedo reservar?</td>            
-            </tr>
-            <tr>
-                <td >-Puede hacer la reservación en cualquier momento, siempre y cuando sea antes de los horarios previamente establecidos.</td>
-            </tr>
-        </table>
+    <div class="reservacion">
+        <form>
+            <div class="form-group">
+                <div class="form-inputs">
+                    <span class="form-label">Nombre</span>
+                    <input class="form-control" type="text" placeholder="Ingresar primer Nombre">
+                </div>
+                <div class="form-inputs">
+                    <span class="form-label">Apellido</span>
+                    <input class="form-control" type="email" placeholder="Ingresar apellido">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="form-inputs">
+                    <span class="form-label">Email</span>
+                    <input class="form-control" type="tel" placeholder="Ingresar correo electronico">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="form-inputs">
+                    <span class="form-label">Cedula</span>
+                    <input class="form-control" type="text" placeholder="Ingresar numero de cedula">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="form-inputs">
+                    <span class="form-label">Numero de Placa</span>
+                    <input class="form-control" type="text" placeholder="Ingresar numero de placa">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="form-date">
+                    <span class="form-label">Fecha</span>
+                    <input class="form-control" type="date" required>
+                </div>
+
+                <div class="form-date">
+                    <span class="form-label">Hora</span>
+                    <select class="form-control">
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                        <option>6</option>
+                        <option>7</option>
+                        <option>8</option>
+                        <option>9</option>
+                        <option>10</option>
+                        <option>11</option>
+                        <option>12</option>
+                    </select>
+                    <span class="select-arrow"></span>
+                </div>
+            
+                <div class="form-date">
+                    <span class="form-label">Minuto</span>
+                        <select class="form-control">
+                            <option>00</option>
+                            <option>05</option>
+                            <option>10</option>
+                            <option>15</option>
+                            <option>20</option>
+                            <option>25</option>
+                            <option>30</option>
+                            <option>35</option>
+                            <option>40</option>
+                            <option>45</option>
+                            <option>50</option>
+                            <option>55</option>
+                        </select>
+                    <span class="select-arrow"></span>
+                </div>
+
+                <div class="form-date">
+                    <span class="form-label">AM/PM</span>
+                    <select class="form-control">
+                        <option>AM</option>
+                        <option>PM</option>
+                    </select>
+                    <span class="select-arrow"></span>
+                </div>
+            </div>
+        
+            <div class="form-btn">
+                <button class="submit-btn">Reservar</button>
+            </div>
+
+        </form>
     </div>
-
-    <div class="borde"></div>
-
-    <br><br><br><br>
-      
-      
-    <div class="botDiv">
-        <div>
-            <h3>Sitios</h3>
-            <ul>
-                <li>
-                    <p class="icons">q</p>
-                    <a href="https://www.ulacit.ac.cr/" target="_blank">Página ULACIT</a>                
-                </li>
-                <li>
-                    <p class="icons">f</p>
-                    <a href="https://www.facebook.com/ulacitcostarica/" target="_blank">Facebook</a> 
-                </li>
-                <li>
-                    <p class="icons">c</p>
-                    <a href="https://www.instagram.com/ulacitcr/" target="_blank">Instagram</a>
-                </li>
-            </ul>
-        </div>  
-        <div> 
-            <h3>ULACIT Parking</h3>
-            <ul style="margin: 15px; padding: 5px;">
-                <li>
-                    <a class="home" href="../Grupo04.html">Home</a>
-                </li>
-                <li>
-                    <a href="contacto.html">Contact</a>
-                </li>
-                <li>
-                    <a href="about.html">Estacionamiento</a>
-                </li>
-            </ul>
-        </div>      
 </body>
+</body>
+
 </html>
