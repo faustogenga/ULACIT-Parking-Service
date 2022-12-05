@@ -60,26 +60,33 @@
   body {
     height: 100%;
     margin: auto;
-  }
-  /* Fondo*/    
-  
-  .aboutContainer{
     background-image: url(../img/Ulacit_Campus.jpg);
     background-size: cover;
     position: relative;
     width: 100%;
-    padding-top: 5%;
-    padding-bottom: 5%;
-    
   }
   
-  .reservacion {
+  .reservacion_img {
+    text-align: center;
+    position: relative;
+    float: left;
+    background-image: url(../img/Reservacion.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-top: 10%;
+    margin-left: 1%;
+    width: 40vw;
+    height: 100vh;
+  }
+
+  
+  .reservacion_form {
     float:  right;
     width: 50%;
     height: 100%;
   }
   
-  .reservacion form {
+  .reservacion_form form {
     text-align: center;
     width: 90%;
     margin: 7% 1%;
@@ -87,7 +94,7 @@
     border-radius: 10px;
   }
 
-  .reservacion .form-group {
+  .reservacion_form .form-group {
     text-align: center;
     position: relative;
     display: flex;
@@ -96,20 +103,20 @@
     height: 80px;
   }
 
-  .reservacion .form-inputs{
+  .reservacion_form .form-inputs{
     width: 100%;
     margin: 1%;
   }
 
-  .reservacion .form-date {
+  .reservacion_form .form-date {
     margin: 1%;
     width: 15%;
   }
-  .reservacion .form-date:first-child {
+  .reservacion_form .form-date:first-child {
     margin: 1%;
     width: 40%;
   }
-  .reservacion .form-label {
+  .reservacion_form .form-label {
     position: relative;
     font-family: zonaproBOLD;
     margin-bottom: 5px;
@@ -120,7 +127,7 @@
     text-transform: uppercase;
   }
 
-  .reservacion .form-control {
+  .reservacion_form .form-control {
     position: relative;
     font-family: zonapro;
     margin-right: 10px;
@@ -136,7 +143,7 @@
   }
   
   
-  .reservacion .submit-btn {
+  .reservacion_form .submit-btn {
     font-family: zonaProBOLD;
     margin-bottom: 15px;
     color: #101113e2;
@@ -149,7 +156,7 @@
     text-transform: uppercase;
   }
 
-  .reservacion .submit-btn:hover {
+  .reservacion_form .submit-btn:hover {
     background-color: #eda64e;
     color: #fff;
   }
