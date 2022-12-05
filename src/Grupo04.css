@@ -93,6 +93,8 @@ main {
   text-align: center;
   position: relative; 
   background: #fff;
+  background-image: url(../img/Ulacit_Campus_bright.jpg);
+  background-size: contain;
 }
 .reserva_button {
   position: relative;
@@ -200,7 +202,7 @@ main {
 }
 
 .informacion_contenido_texto * {
-  margin: 2% 0%;
+  margin: 4% 0%;
 }
 
 .informacion_contenido_texto h3{
