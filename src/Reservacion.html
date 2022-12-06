@@ -7,7 +7,6 @@
     <link rel="Stylesheet" href="Reservacion.css">
     <title>Reservaciones</title>
 </head>
-
 <header>
     <div class="topmenu">
         <a class="home" href="../Grupo04.html">Inicio</a>
@@ -17,54 +16,62 @@
         <a href="Reservacion.html">Reservacion</a>
         <img class="logo_ulacit" src="../img/logo_ulacit.png" alt="Logo ULACIT">
     </div>
-    <div class="borde">
-    </div>
+    <div class="borde"></div>
 </header>
-
 <body>
-    <div class="reservacion">
-        <form>
+    <div class="reservacion_img"></div>
+    <div class="reservacion_form">
+        <form name="Reservacion" method="post" action="../php/reservacion.php">
+            <div class="reservacion_form_top" >
+                <h1>Reservación</h1>
+            </div>
             <div class="form-group">
                 <div class="form-inputs">
                     <span class="form-label">Nombre</span>
-                    <input class="form-control" type="text" placeholder="Ingresar primer Nombre">
+                    <input class="form-control" name="txtNombre" type="text" placeholder="Ingresar primer nombre">
                 </div>
                 <div class="form-inputs">
                     <span class="form-label">Apellido</span>
-                    <input class="form-control" type="email" placeholder="Ingresar apellido">
+                    <input class="form-control" name="txtApellido"  type="text" placeholder="Ingresar apellido">
                 </div>
             </div>
 
             <div class="form-group">
                 <div class="form-inputs">
                     <span class="form-label">Email</span>
-                    <input class="form-control" type="tel" placeholder="Ingresar correo electronico">
+                    <input class="form-control" name="txtEmail"  type="email" placeholder="Ingresar correo electronico">
                 </div>
             </div>
 
             <div class="form-group">
                 <div class="form-inputs">
                     <span class="form-label">Cedula</span>
-                    <input class="form-control" type="text" placeholder="Ingresar numero de cedula">
+                    <input class="form-control" name="numCedula"  type="text" placeholder="Ingresar numero de cedula">
                 </div>
             </div>
 
             <div class="form-group">
-                <div class="form-inputs">
+                <div class="form-placa">
                     <span class="form-label">Numero de Placa</span>
-                    <input class="form-control" type="text" placeholder="Ingresar numero de placa">
+                    <input class="form-control" name="numPlaca"  type="text" placeholder="Ingresar numero de placa">
+                </div>
+                <div class="form-espacio">
+                    <span class="form-label">Espacio del parqueo</span>
+                    <select class="form-control" name="numEspacio">
+                    </select>
+                    <span class="select-arrow"></span>
                 </div>
             </div>
 
             <div class="form-group">
                 <div class="form-date">
                     <span class="form-label">Fecha</span>
-                    <input class="form-control" type="date" required>
+                    <input class="form-control" type="date" name="Fecha"  required>
                 </div>
 
                 <div class="form-date">
                     <span class="form-label">Hora</span>
-                    <select class="form-control">
+                    <select class="form-control"  name="numHora" >
                         <option>1</option>
                         <option>2</option>
                         <option>3</option>
@@ -80,43 +87,72 @@
                     </select>
                     <span class="select-arrow"></span>
                 </div>
-            
                 <div class="form-date">
                     <span class="form-label">Minuto</span>
-                        <select class="form-control">
-                            <option>00</option>
-                            <option>05</option>
-                            <option>10</option>
-                            <option>15</option>
-                            <option>20</option>
-                            <option>25</option>
-                            <option>30</option>
-                            <option>35</option>
-                            <option>40</option>
-                            <option>45</option>
-                            <option>50</option>
-                            <option>55</option>
-                        </select>
+                    <select class="form-control" name="numMinuto" >
+                        <option>00</option>
+                        <option>05</option>
+                        <option>10</option>
+                        <option>15</option>
+                        <option>20</option>
+                        <option>25</option>
+                        <option>30</option>
+                        <option>35</option>
+                        <option>40</option>
+                        <option>45</option>
+                        <option>50</option>
+                        <option>55</option>
+                    </select>
                     <span class="select-arrow"></span>
                 </div>
 
                 <div class="form-date">
                     <span class="form-label">AM/PM</span>
-                    <select class="form-control">
+                    <select class="form-control" name="AMPM" >
                         <option>AM</option>
                         <option>PM</option>
                     </select>
                     <span class="select-arrow"></span>
                 </div>
             </div>
-        
-            <div class="form-btn">
-                <button class="submit-btn">Reservar</button>
-            </div>
 
+            <div class="form-btn">
+                <input type="submit" name="submit" value="Reservar" class="submit-btn"></button>
+            </div>
         </form>
     </div>
 </body>
-</body>
-
+<div class="footer">
+    <div>
+        <h3>Sitios</h3>
+        <ul class="footer_1">
+            <li>
+                <p class="icons">q</p>
+                <a href="https://www.ulacit.ac.cr/" target="_blank">Página ULACIT</a>
+            </li>
+            <li>
+                <p class="icons">f</p>
+                <a href="https://www.facebook.com/ulacitcostarica/" target="_blank">Facebook</a>
+            </li>
+            <li>
+                <p class="icons">c</p>
+                <a href="https://www.instagram.com/ulacitcr/" target="_blank">Instagram</a>
+            </li>
+        </ul>
+    </div>
+    <div>
+        <h3>ULACIT Parking</h3>
+        <ul class="footer_2">
+            <li>
+                <a class="home" href="../Grupo04.html">Home</a>
+            </li>
+            <li>
+                <a href="contacto.html">Contact</a>
+            </li>
+            <li>
+                <a href="Preguntas.html">Estacionamiento</a>
+            </li>
+        </ul>
+    </div>
+</div>
 </html>
