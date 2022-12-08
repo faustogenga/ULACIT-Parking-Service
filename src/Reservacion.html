@@ -75,7 +75,7 @@
                         include '../php/connection.php';
 
                         $conn = OpenCon();
-                        
+
                         if (!$conn) {
                             die("Connection failed: " . mysqli_connect_error());
                         }
@@ -86,13 +86,10 @@
                         
                         $option = mysqli_fetch_all($result, MYSQLI_ASSOC);
 
-                        ?>
-                        <option>Seleccione un espacio</option>
-
-                        <?php foreach ($option as $numEspacio) {
+                        foreach ($option as $numEspacio) {
                             ?>
                             <option> 
-                                <?php echo $numEspacio['Espacio'];?>
+                                <?php echo $numEspacio['Espacio'] ?>
                             </option>
                         <?php } ?>
                     </select>
