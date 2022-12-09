@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="Stylesheet" href="Registro.css">
+    <title>Reservaciones</title>
+</head>
+<header>
+    <div class="topmenu">
+        <a class="home" href="../Grupo04.html">Inicio</a>
+        <a href="https://www.ulacit.ac.cr/" target="_blank">ULACIT</a>
+        <a href="Contacto.html">Contacto</a>
+        <a href="Preguntas.html">Preguntas Frecuentes</a>
+        <a href="Reservacion.html">Reservacion</a>
+        <img class="logo_ulacit" src="../img/logo_ulacit.png" alt="Logo ULACIT">
+    </div>
+    <div class="borde"></div>
+</header>
+<body>
+    <div class="reservacion_img"></div>
+    <div class="reservacion_form">
+        <form name="Reservacion" method="post"  action="../php/Registro.php">
+            <div class="reservacion_form_top" >
+                <h1>Seleciona tu Parqueo</h1>
+            </div>
+            <div class="form-group">
+                <div class="form-espacio">
+                    <span class="form-label">Parqueos disponibles</span>
+                    <select class="form-control" name="numEspacio" id="numEspacio" required>
+                        <?php
+                        session_start();
+                        // database connection code
+
+                        include '../php/connection.php';
+
+                        $conn = OpenCon();
+
+                        if (!$conn) {
+                            die("Connection failed: " . mysqli_connect_error());
+                        }
+                        
+                        $Fecha = $_SESSION['Fecha'];
+                        
+                        echo "<script>console.log($Fecha)</script>";
+                        echo "<script>console.log('hola')</script>";
+
+                        $sql = "SELECT Espacio FROM `dbo.parqueo` WHERE Espacio NOT IN (SELECT Espacio FROM `dbo.reservacion` WHERE Fecha = '$Fecha')";
+
+                        $result = mysqli_query($conn, $sql);
+                        
+                        $option = mysqli_fetch_all($result, MYSQLI_ASSOC);
+
+                        foreach ($option as $numEspacio) {
+                            ?>
+                            <option> 
+                                <?php echo $numEspacio['Espacio'] ?>
+                            </option>
+                        <?php } ?>
+                    </select>
+                    <span class="select-arrow"></span>
+                </div>
+            </div>
+            <div class="form-btn">
+                <input type="submit" name="submit" value="Reservar" class="submit-btn"></button>
+            </div>
+        </form>
+    </div>
+</body>
+<div class="footer">
+    <div>
+        <h3>Sitios</h3>
+        <ul class="footer_1">
+            <li>
+                <p class="icons">q</p>
+                <a href="https://www.ulacit.ac.cr/" target="_blank">Página ULACIT</a>
+            </li>
+            <li>
+                <p class="icons">f</p>
+                <a href="https://www.facebook.com/ulacitcostarica/" target="_blank">Facebook</a>
+            </li>
+            <li>
+                <p class="icons">c</p>
+                <a href="https://www.instagram.com/ulacitcr/" target="_blank">Instagram</a>
+            </li>
+        </ul>
+    </div>
+    <div>
+        <h3>ULACIT Parking</h3>
+        <ul class="footer_2">
+            <li>
+                <a class="home" href="../Grupo04.html">Home</a>
+            </li>
+            <li>
+                <a href="contacto.html">Contact</a>
+            </li>
+            <li>
+                <a href="Preguntas.html">Estacionamiento</a>
+            </li>
+        </ul>
+    </div>
+</div>
+<script src="Reservacion.js"></script>
+</html>

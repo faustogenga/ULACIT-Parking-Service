@@ -21,7 +21,7 @@
 <body>
     <div class="reservacion_img"></div>
     <div class="reservacion_form">
-        <form name="Reservacion" method="post" action="../php/reservacion.php">
+        <form name="Reservacion" method="post"  action="../php/Reservacion.php">
             <div class="reservacion_form_top" >
                 <h1>Reservación</h1>
             </div>
@@ -43,14 +43,14 @@
                 </div>
                 <div class="form-inputs">
                     <span class="form-label">Telefono</span>
-                    <input class="form-control" name="numTelefono"  type="tel" placeholder="Ingresar numero telefono" required>
+                    <input class="form-control" name="numTelefono"  type="number" placeholder="Ingresar numero telefono" required>
                 </div>
             </div>
 
             <div class="form-group">
                 <div class="form-inputs">
                     <span class="form-label">Cedula</span>
-                    <input class="form-control" name="numCedula"  type="text" placeholder="Ingresar numero de cedula" required>
+                    <input class="form-control" name="numCedula"  type="number" placeholder="Ingresar numero de cedula" required>
                 </div>
                 <div class="form-inputs">
                     <span class="form-label">Numero de Placa</span>
@@ -66,48 +66,11 @@
                     <span class="form-label">color del auto</span>
                     <input class="form-control" name="txtColor"  type="text" placeholder="Color" required>
                 </div>
+            </div>
+            <div class="form-group">
                 <div class="form-date">
                     <span class="form-label">Fecha</span>
                     <input class="form-control" id="Fecha" type="date" name="Fecha" min="2011-01-01" required>
-                </div>
-            </div>
-
-            <div class="form-group">
-                <div class="form-espacio">
-                    <span class="form-label">Espacio del parqueo</span>
-                    <select class="form-control" name="numEspacio" id="numEspacio" required>
-                        <option>
-                            1
-                        </option>
-                        <?php
-                        // database connection code
-
-                        include '../php/connection.php';
-
-                        $conn = OpenCon();
-
-                        if (!$conn) {
-                            die("Connection failed: " . mysqli_connect_error());
-                        }
-                        
-                        $Fecha = $_COOKIE['x'];
-
-                        $sql = "SELECT Espacio FROM `dbo.parqueo` WHERE Espacio NOT IN (SELECT Espacio FROM `dbo.reservacion` WHERE Fecha = '$Fecha')";
-
-                        $sql = "SELECT Espacio FROM `dbo.reservacion` WHERE Fecha = '$Fecha'";
-
-                        $result = mysqli_query($conn, $sql);
-                        
-                        $option = mysqli_fetch_all($result, MYSQLI_ASSOC);
-
-                        foreach ($option as $numEspacio) {
-                            ?>
-                            <option> 
-                                <?php echo $numEspacio['Espacio'] ?>
-                            </option>
-                        <?php } ?>
-                    </select>
-                    <span class="select-arrow"></span>
                 </div>
                 <div class="form-hora">
                     <span class="form-label">Hora</span>
@@ -120,25 +83,6 @@
                 <input type="submit" name="submit" value="Reservar" class="submit-btn"></button>
             </div>
         </form>
-
-        
-        <div class="loginPopup">
-            <div class="formPopup" id="popupForm">
-              <form action="/action_page.php" class="formContainer">
-                <h2>Please Log in</h2>
-                <label for="email">
-                  <strong>E-mail</strong>
-                </label>
-                <input type="text" id="email" placeholder="Your Email" name="email" required>
-                <label for="psw">
-                  <strong>Password</strong>
-                </label>
-                <input type="password" id="psw" placeholder="Your Password" name="psw" required>
-                <button type="submit" class="btn">Log in</button>
-                <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
-              </form>
-            </div>
-          </div>
     </div>
 </body>
 <div class="footer">

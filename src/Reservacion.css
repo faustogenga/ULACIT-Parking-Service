@@ -14,13 +14,6 @@
   src: url(../fonts/SocialMediaIcons.ttf);
 }
 
-body {
-  background-image: url(../img/Ulacit_Campus.jpg);
-  background-size: cover;
-  position: relative;
-  width: 100%;
-}
-
 .topmenu {
   background-color: #31003F;
   overflow: hidden;
@@ -134,12 +127,12 @@ body {
 
 .reservacion_form .form-marca {
   margin: 1%;
-  width: 33%;
+  width: 50%;
 }
 
 .reservacion_form .form-color {
   margin: 1%;
-  width: 33%;
+  width: 50%;
 }
 
 .reservacion_form .form-espacio {
@@ -149,7 +142,7 @@ body {
 
 .reservacion_form .form-date {
   margin: 1%;
-  width: 33%;
+  width: 50%;
 }
 
 .reservacion_form .form-hora {
