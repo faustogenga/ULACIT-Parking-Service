@@ -66,9 +66,19 @@
                     <span class="form-label">color del auto</span>
                     <input class="form-control" name="txtColor"  type="text" placeholder="Color" required>
                 </div>
+                <div class="form-date">
+                    <span class="form-label">Fecha</span>
+                    <input class="form-control" id="Fecha" type="date" name="Fecha" min="2011-01-01" required>
+                </div>
+            </div>
+
+            <div class="form-group">
                 <div class="form-espacio">
                     <span class="form-label">Espacio del parqueo</span>
-                    <select class="form-control" name="numEspacio" required>
+                    <select class="form-control" name="numEspacio" id="numEspacio" required>
+                        <option>
+                            1
+                        </option>
                         <?php
                         // database connection code
 
@@ -80,7 +90,11 @@
                             die("Connection failed: " . mysqli_connect_error());
                         }
                         
-                        $sql = "SELECT * FROM `dbo.parqueo` WHERE Disponibilidad = 'D' ";
+                        $Fecha = $_COOKIE['x'];
+
+                        $sql = "SELECT Espacio FROM `dbo.parqueo` WHERE Espacio NOT IN (SELECT Espacio FROM `dbo.reservacion` WHERE Fecha = '$Fecha')";
+
+                        $sql = "SELECT Espacio FROM `dbo.reservacion` WHERE Fecha = '$Fecha'";
 
                         $result = mysqli_query($conn, $sql);
                         
@@ -95,57 +109,9 @@
                     </select>
                     <span class="select-arrow"></span>
                 </div>
-            </div>
-
-            <div class="form-group">
-                <div class="form-date">
-                    <span class="form-label">Fecha</span>
-                    <input class="form-control" type="date" name="Fecha"  required>
-                </div>
-
-                <div class="form-date">
+                <div class="form-hora">
                     <span class="form-label">Hora</span>
-                    <select class="form-control"  name="numHora" >
-                        <option>1</option>
-                        <option>2</option>
-                        <option>3</option>
-                        <option>4</option>
-                        <option>5</option>
-                        <option>6</option>
-                        <option>7</option>
-                        <option>8</option>
-                        <option>9</option>
-                        <option>10</option>
-                        <option>11</option>
-                        <option>12</option>
-                    </select>
-                    <span class="select-arrow"></span>
-                </div>
-                <div class="form-date">
-                    <span class="form-label">Minuto</span>
-                    <select class="form-control" name="numMinuto" >
-                        <option>00</option>
-                        <option>05</option>
-                        <option>10</option>
-                        <option>15</option>
-                        <option>20</option>
-                        <option>25</option>
-                        <option>30</option>
-                        <option>35</option>
-                        <option>40</option>
-                        <option>45</option>
-                        <option>50</option>
-                        <option>55</option>
-                    </select>
-                    <span class="select-arrow"></span>
-                </div>
-
-                <div class="form-date">
-                    <span class="form-label">AM/PM</span>
-                    <select class="form-control" name="AMPM" >
-                        <option>AM</option>
-                        <option>PM</option>
-                    </select>
+                    <input type="time" name="Hora" id="Hora" min="06:00" max="19:00" value="18:24" required>
                     <span class="select-arrow"></span>
                 </div>
             </div>
@@ -154,6 +120,25 @@
                 <input type="submit" name="submit" value="Reservar" class="submit-btn"></button>
             </div>
         </form>
+
+        
+        <div class="loginPopup">
+            <div class="formPopup" id="popupForm">
+              <form action="/action_page.php" class="formContainer">
+                <h2>Please Log in</h2>
+                <label for="email">
+                  <strong>E-mail</strong>
+                </label>
+                <input type="text" id="email" placeholder="Your Email" name="email" required>
+                <label for="psw">
+                  <strong>Password</strong>
+                </label>
+                <input type="password" id="psw" placeholder="Your Password" name="psw" required>
+                <button type="submit" class="btn">Log in</button>
+                <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+              </form>
+            </div>
+          </div>
     </div>
 </body>
 <div class="footer">
@@ -189,4 +174,5 @@
         </ul>
     </div>
 </div>
+<script src="Reservacion.js"></script>
 </html>

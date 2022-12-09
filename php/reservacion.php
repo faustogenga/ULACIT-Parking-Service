@@ -1,4 +1,5 @@
 <?php
+    
 // database connection code
 include 'connection.php';
 $conn = OpenCon();
@@ -18,9 +19,7 @@ $txtMarca = $_POST['txtMarca'];
 $txtColor = $_POST['txtColor'];
 $numEspacio = $_POST['numEspacio'];
 $Fecha = $_POST['Fecha'];
-$numHora = $_POST['numHora'];
-$numMinuto = $_POST['numMinuto'];
-$AMPM = $_POST['AMPM'];
+$Hora = $_POST['Hora'];
 
 
 // check si existe ya el usuario
@@ -31,9 +30,8 @@ $foundplaca = false;
 
 
 $sqlinsert1 = "INSERT INTO `dbo.persona` (ID_Persona, Nombre, Correo, Telefono) VALUES ('$numCedula', '$txtNombre', '$txtEmail', '$numTelefono')";
-$sqlinsert2 = "INSERT INTO `dbo.parqueo` (Espacio, Tipo_seguridad, Disponibilidad) VALUES ('99', 'Parqueo_Privado', 'O')";
 $sqlinsert3 = "INSERT INTO `dbo.vehiculo` (Placa, Marca, ID_Persona, Color) VALUES ('$numPlaca', '$txtMarca', '$numCedula', '$txtColor')";
-$sqlinsert4 = "INSERT INTO `dbo.reservacion` (ID_Persona, Placa, Espacio, Fecha) VALUES ('$numCedula', '$numPlaca', '$numEspacio', '$Fecha')"; //*,'$numHora', '$numMinuto', '$AMPM'x  z   
+$sqlinsert4 = "INSERT INTO `dbo.reservacion` (ID_Persona, Placa, Espacio, Fecha, Hora) VALUES ('$numCedula', '$numPlaca', '$numEspacio', '$Fecha', '$Hora')";
 
 $sqlquery = "SELECT ID_Persona, Nombre FROM `dbo.persona`";
 
@@ -60,7 +58,6 @@ if (mysqli_num_rows($result) > 0) {
                     //placa existente, insertar reservacion y parqueo
                     $foundplaca = true;
 
-                    mysqli_query($conn, $sqlinsert2);
                     mysqli_query($conn, $sqlinsert4);
     
                     echo '<script>alert("persona y placa existentes");</script>';
@@ -70,7 +67,6 @@ if (mysqli_num_rows($result) > 0) {
 
             if ($foundplaca == false) {
                 //placa no existente, insertar vehiculo, reservacion y parqueo
-                mysqli_query($conn, $sqlinsert2);
                 mysqli_query($conn, $sqlinsert3);
                 mysqli_query($conn, $sqlinsert4);
 
@@ -82,11 +78,6 @@ if (mysqli_num_rows($result) > 0) {
         //Usuario no existente, insertar persona, vehiculo, reservacion y parqueo
         if ($conn->query($sqlinsert1) === TRUE) {
             echo "reservation";
-          } else {
-            echo "Error: " . $sql . "<br>" . $conn->error;
-          }
-          if ($conn->query($sqlinsert2) === TRUE) {
-            echo "parqueo";
           } else {
             echo "Error: " . $sql . "<br>" . $conn->error;
           }
@@ -109,5 +100,4 @@ if (mysqli_num_rows($result) > 0) {
 }
 
 $conn->close();
-
 ?>

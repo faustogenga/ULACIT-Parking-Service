@@ -132,31 +132,37 @@ body {
   margin: 1%;
 }
 
-.reservacion_form .form-date {
-  margin: 1%;
-  width: 20%;
-}
-
 .reservacion_form .form-marca {
   margin: 1%;
-  width: 30%;
+  width: 33%;
 }
 
 .reservacion_form .form-color {
   margin: 1%;
-  width: 30%;
+  width: 33%;
 }
 
 .reservacion_form .form-espacio {
   margin: 1%;
-  width: 40%;
+  width: 50%;
 }
 
-.reservacion_form .form-date:first-child {
+.reservacion_form .form-date {
   margin: 1%;
-  width: 40%;
+  width: 33%;
 }
 
+.reservacion_form .form-hora {
+  margin: 1%;
+  width: 50%;
+}
+.reservacion_form #Hora {
+  margin: 2%;
+  line-height: 3.5vh;
+  font-size: 1.2vw;
+  color: #101113ec;
+  opacity: 0.9;
+}
 .reservacion_form .form-label {
   position: relative;
   font-family: zonaproBOLD;
