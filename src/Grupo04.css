@@ -253,6 +253,13 @@ input[type=text] {
   margin: 1% 2%;
 }
 
+input[type=email]{
+  float: left;
+  width: 20%;
+  padding: 1%;
+  margin: 1% 2%;
+}
+
 .newsletter form label{
   font-family: ZonaPro;
   font-size: 60%;

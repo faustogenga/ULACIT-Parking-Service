@@ -13,43 +13,82 @@
         <a href="Contacto.html">Contacto</a>
         <a href="Preguntas.html">Preguntas Frecuentes</a>
         <a href="Reservacion.html">Reservacion</a>
-        <img class="logo_ulacit" src="img/logo_ulacit.png" alt="Logo ULACIT">
+        <img class="logo_ulacit" src="../img/logo_ulacit.png" alt="Logo ULACIT">
       </div>
       <div class="borde">
       </div>
     </header>
-      
-      <div class="front">
-        <h1>ULACIT PARKING<span> SERVICE </span></h1>
-        <img src="../img/background Fronttext.png" alt="Imagen de autos parqueados">
-      </div>
-      <div class="borde"></div>
-      
 </head>
-<body>
-  <table>
-    <tr>
-      <td>
-        <div class="newsletter">
-          <form>
-            <h3> Envianos un comentario</h3>
-            <div class="form_container" >
-              <input type="text" placeholder="Nombre Completo" name="name" required>
-              <input type="text" placeholder="Correo electronico" name="email" required>
-              <input type="text" placeholder="Comentarios" name="duda" required>
-              <br>
-            </div>
-            <div class="submit">
-              <input type="submit" value="Enviar">
-            </div>
-              <h3> O contactanos directamente a</h2>
-              <h3> Telefóno: 8400-3485 </h3>
-              <h3> Email: murilloalonso@hotmail.com</h3>
-          </form>
-        </div>
-      </td>
-    </tr>
-  </table>
 
+
+<body>
+  <div class="aboutContainer">    
+    <table>
+      <tr>
+        <td>
+          <div class="newsletter">
+            <form method="post" action="../php/contacto.php">
+              <h3> Envianos un comentario</h3>
+              <div class="form_container" >
+                <input type="text" placeholder="Nombre Completo" name="txtNombre" required>
+                <input type="text" placeholder="Correo electronico" name="txtEmail" required>
+                <input type="text" placeholder="Comentarios" name="txtComentario" required>
+                <br>
+              </div>
+              <div class="checkbox">
+                <input type="checkbox" name="check" value="1">
+                <label for="check">Acepto recibir noticias e informacion</label>
+              </div>
+              <div class="submit">
+                <input type="submit" value="Enviar">
+              </div>
+                <h3> O contactanos directamente a</h2>
+                <h3> Telefóno: 8400-3485 </h3>
+                <h3> Email: murilloalonso@hotmail.com</h3>
+            </form>
+          </div>
+        </td>
+      </tr>
+    </table>
+  </div>
+
+  <div class="borde"></div>
+    
+  <div class="footer">
+      <div>
+          <h3>Sitios</h3>
+          <ul class="footer_1">
+              <li>
+                  <p class="icons">q</p>
+                  <a href="https://www.ulacit.ac.cr/" target="_blank">Página ULACIT</a>                
+              </li>
+              <li>
+                  <p class="icons">f</p>
+                  <a href="https://www.facebook.com/ulacitcostarica/" target="_blank">Facebook</a> 
+              </li>
+              <li>
+                  <p class="icons">c</p>
+                  <a href="https://www.instagram.com/ulacitcr/" target="_blank">Instagram</a>
+              </li>
+          </ul>
+      </div>  
+      <div> 
+          <h3>ULACIT Parking</h3>
+          <ul class="footer_2">
+              <li>
+                  <a class="home" href="../Grupo04.html">Home</a>
+              </li>
+              <li>
+                  <a href="contacto.html">Contact</a>
+              </li>
+              <li>
+                  <a href="Preguntas.html">Estacionamiento</a>
+              </li>
+          </ul>
+      </div>  
+  </div>  
+  <script src="jquery.min.js"></script>
+  <script src="Preguntas.js"></script>  
 </body>
 </html>
+

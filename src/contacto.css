@@ -59,31 +59,6 @@
   /*FRENTE Parqueo ULACIT
   * Imagenes de fondo
   */
-  .front { 
-      background-image: url(../img/cielo.jpg);
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-    font-family: ZonaProBOLD;
-    text-align: center;
-    width: 100%;
-  }
-  .front img{
-    position: relative;
-      width: 100%;
-    margin-bottom: -1%;
-  }
-  .front h1 { 
-    width: 100%;
-      position: fixed;
-    font-size: 6vw;
-    line-height: .8;
-    color: #502F5D;
-  }
-  .front h1 span{
-    font-family: ZonaPro;
-    display: block;
-    font-size: 3vw;
-  }
   body {
     margin: auto;
   }
@@ -254,16 +229,18 @@
     margin: 1% 2%;
   }
 
+  .checkbox{
+    line-height: 30px;
+    margin-bottom: 3%;
+  }
   .submit {
-    float: left;
-    text-align: left;
     width: 100%;
+    text-align: left;
   }
   
   input[type=submit] {
-    margin: 1% 2%;
-    float: left;
-    width: 95%;
+    margin: 1% 2%; 
+    width: 40%;
     padding: 1vw;
     background-color: #008A85;
     color: white;
@@ -275,7 +252,6 @@
   }
   
   input[type=submit]:hover {
-  
     background-color: #09bdb7;
   }
   
@@ -294,6 +270,7 @@
   
   .aboutContainer{
     background-image: url(../img/Ulacit_Campus.jpg);
+    background-size: cover;
     position: relative;
     width: 100%;
     margin-bottom: -0.2%;

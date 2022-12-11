@@ -59,13 +59,13 @@
   </div>
 
   <div class="newsletter">
-    <form>
+    <form method="post"  action="php/suscripcion.php">
       <h3>Recibe todas las actualizaciones del parqueo</h3>
-        <input type="text" placeholder="Nombre Completo" name="name" required>
-        <input type="text" placeholder="Correo electronico" name="email" required>
+      <input name="txtNombre" type="text" placeholder="Ingresar primer nombre" required>
+      <input name="txtEmail"  type="email" placeholder="Ingresar correo electronico" required>
         <br>
         <label>
-          <input type="checkbox"  name="subcribirse">
+          <input type="checkbox"  name="subcribirse" required>
           <span>He leído y acepto la <a href="https://www.ulacit.ac.cr/politica-de-datos/" target="_blank">Política de Privacidad</a></span>
         </label>
         <div class="submit">

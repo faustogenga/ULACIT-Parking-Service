@@ -29,7 +29,7 @@ $txtNombreCompleto = $txtNombre . " " . $txtApellido;
 $foundID = false;
 $foundplaca = false;
 
-$sqlinsert1 = "INSERT INTO `dbo.persona` (ID_Persona, Nombre, Correo, Telefono) VALUES ('$numCedula', '$txtNombreCompleto', '$txtEmail', '$numTelefono')";
+$sqlinsert1 = "INSERT INTO `dbo.persona` (ID_Persona, Nombre, Correo, Telefono) VALUES ('$numCedula', '$txtNombreCompleto', '$txtEmail', '$numTelefono')"
 $sqlinsert3 = "INSERT INTO `dbo.vehiculo` (Placa, Marca, ID_Persona, Color) VALUES ('$numPlaca', '$txtMarca', '$numCedula', '$txtColor')";
 $sqlinsert4 = "INSERT INTO `dbo.reservacion` (ID_Persona, Placa, Espacio, Fecha, Hora) VALUES ('$numCedula', '$numPlaca', '$numEspacio', '$Fecha', '$Hora')";
 

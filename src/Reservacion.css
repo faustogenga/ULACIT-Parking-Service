@@ -58,7 +58,7 @@
 body {
   margin: auto;
   background-image: url(../img/Ulacit_Campus.jpg);
-  background-size: cover;
+  background-size: contain;
   position: relative;
   width: 100%;
 }
@@ -67,14 +67,16 @@ body {
   text-align: center;
   position: relative;
   float: left;
-  background-image: url(../img/Reservacion.jpg);
-  background-size: contain;
+  background-image: url(../img/Parqueo5.jpg);
+  background-size: cover;
   background-repeat: no-repeat;
-  border-radius: 10px;
+  width: 100%;
+  border: #ffffff 2px solid;
+  border-radius: 50px;
   margin-top: 10%;
   margin-left: 1%;
   width: 40vw;
-  height: 60vh;
+  height: 50vh;
   opacity: 0.97;
 }
 
