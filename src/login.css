@@ -1,0 +1,157 @@
+
+/*fonts*/
+@font-face {
+    font-family: ZonaProBOLD;
+    src: url(../fonts/ZonaPro-Bold.otf);
+  }
+  @font-face {
+    font-family: ZonaPro;
+    src: url(../fonts/ZonaPro-ExtraLight.otf);
+  }
+  
+  @font-face {
+    font-family: socialMedia;
+    src: url(../fonts/SocialMediaIcons.ttf);
+  }
+  
+  .topmenu {
+    background-color: #31003F;
+    overflow: hidden;
+  }
+  .topmenu a {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    font-family: ZonaPro;
+    padding: 1% 1%;
+    text-decoration: none;
+    font-size: 15px;
+    transition-duration: 0.7s;
+  }
+  /*hover */
+  .topmenu a:hover {
+    background-color: #dddddd;
+    color: #31003F;
+    font-weight:700;
+  }
+  /*home activado */
+  .topmenu a.home {
+    background-color: #de8518;
+    color: white;
+  }
+  .logo_ulacit {
+    float: right;
+    margin: 0.1% 2%;
+    width: 9%;
+  }
+  
+  body {
+    margin: auto;
+    background-image: url(../img/Ulacit_Campus.jpg);
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+  }
+  .borde {
+    position: relative;
+    width: 100%;
+    height: 2px;
+    background-color: #de8518;
+  }
+  .Login_contenedor{
+    line-height: 50px;
+    margin: auto;
+    margin-bottom: 5%;
+    position: relative;
+    background-color: #31003fda;
+    height: 60vh;
+    width: 50%;
+  }
+
+  .Login_contenedor h1{
+    line-height: 100px;
+    font-size: 4vw;
+    font-family: ZonaPro;
+    color: aliceblue;
+  }
+
+  .Login_contenedor p{
+    font-size: 1.5vw;
+    font-family: ZonaPro;
+    color: aliceblue;
+  }
+
+  .user-box input, .password-box input{
+    margin: 2%;
+    font-size: 1.5vw;
+    border: none;
+    border-radius: 5px;
+    height: 4vh;
+  }
+
+  
+  .Login_contenedor .submit-btn{
+    font-family: zonaProBOLD;
+    margin-bottom: 15px;
+    color: #101113e2;
+    background-color: #ffc001;
+    font-weight: 700;
+    height: 50px;
+    border: none;
+    width: 50%;
+    border-radius: 3px;
+    text-transform: uppercase;
+  }
+  
+  .Login_contenedor .submit-btn:hover {
+    background-color: #eda64e;
+    color: #fff;
+  }
+  
+  .footer{
+      position: relative;
+      display: inline-flex;
+      background-color: #31003F;
+      width: 100%;
+      display: flex;  
+      justify-content: center;
+      padding-top: 5px;
+      padding-bottom: 5px;
+      font-family: ZonaPro;
+  }
+  .footer div{
+    width:  10%;
+    margin: 5px;
+    padding: 10px;
+  }
+  .footer div h3{
+    text-align: center;
+    color: #dddddd;
+    font-weight: 900;
+  }
+  .footer ul{
+    list-style: none;
+    margin-left: -45px;
+    color: #dddddd;
+  }
+  .footer ul li {
+    margin-bottom: 10px;
+  }
+  .footer ul li p{
+    display: inline-flex;
+    margin: 2px;
+  }
+  .footer ul li a{
+    color: #dddddd;
+    text-decoration: none;
+  }
+  .footer ul li a:hover{
+    font-weight: bolder;
+  }
+  .icons{
+    font-family: socialMedia;
+  }
+
+
+  

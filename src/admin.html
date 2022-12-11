@@ -3,10 +3,11 @@
 
 <head>
     <meta charset="UTF-8">
-    <link rel ="stylesheet" href="gracias.css">
-    <title>Gracias</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="admin.css">
+    <title>Admin</title>
 </head>
-
 <header>
     <div class="topmenu">
         <a class="home" href="../Grupo04.html">Inicio</a>
@@ -16,42 +17,60 @@
         <a href="Reservacion.html">Reservacion</a>
         <a href="Admin.html">Admin</a>
         <img class="logo_ulacit" src="../img/logo_ulacit.png" alt="Logo ULACIT">
-      </div>
+    </div>
     <div class="borde">
     </div>
-  </header>
+</header>
 
-  <body>
-    <div class="Gracias_contenedor"> 
-        <h1>Gracias por su reserva</h1> 
-        <p>Descarga tu reserva aqui :</p>  
-        <form action="../php/pdfcreator.php" method="post">
-            <input type="submit" class="submit-btn" value="Descargar">
-        </form>
-        <img src="../img/logo_ulacit.png" alt="logo_ulacit" style="margin: 5%; width: 10vw; float: left; margin-top: 10%;">
+<body>
+    <div class="tabla_reservaciones">
+        <?php
+        include '../php/Connection.php';
+        
+        $conn = OpenCon();
+        if (!$conn) {
+            die("Connection failed: " . mysqli_connect_error());
+        };
+
+        $sqlselect = "SELECT * FROM `dbo.reservacion`";
+        $result = mysqli_query($conn, $sqlselect);
+
+        if ($result->num_rows > 0) {
+        echo "<table><tr><th>#</th><th>Id_Persona</th><th>Placa</th><th>Espacio</th><th>Fecha</th><th>Hora</th></tr>";
+        // output data of each row
+        while($row = $result->fetch_assoc()) {
+            echo "<tr><td>".$row["ID_Reservacion"]."</td><td>".$row["ID_Persona"]."</td></td><td>".$row["Placa"]."</td></td><td>".$row["Espacio"]."</td></td><td>".$row["Fecha"]."</td><td>".$row["Fecha"]."</td></tr>";
+        }
+        echo "</table>";
+        } else {
+        echo "0 results";
+        }
+
+
+        ?>
     </div>
 
     <div class="borde"></div>
-      
+
     <div class="footer">
         <div>
             <h3>Sitios</h3>
             <ul class="footer_1">
                 <li>
                     <p class="icons">q</p>
-                    <a href="https://www.ulacit.ac.cr/" target="_blank">Página ULACIT</a>                
+                    <a href="https://www.ulacit.ac.cr/" target="_blank">Página ULACIT</a>
                 </li>
                 <li>
                     <p class="icons">f</p>
-                    <a href="https://www.facebook.com/ulacitcostarica/" target="_blank">Facebook</a> 
+                    <a href="https://www.facebook.com/ulacitcostarica/" target="_blank">Facebook</a>
                 </li>
                 <li>
                     <p class="icons">c</p>
                     <a href="https://www.instagram.com/ulacitcr/" target="_blank">Instagram</a>
                 </li>
             </ul>
-        </div>  
-        <div> 
+        </div>
+        <div>
             <h3>ULACIT Parking</h3>
             <ul class="footer_2">
                 <li>
@@ -64,7 +83,8 @@
                     <a href="Preguntas.html">Estacionamiento</a>
                 </li>
             </ul>
-        </div>  
-    </div>    
+        </div>
+    </div>
 </body>
+
 </html>

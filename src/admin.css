@@ -69,119 +69,45 @@
     position: relative; 
     background: #fff;
   }
-
-  .reserva_button {
-    position: relative;
-    margin: auto;
-    color: white;
-    padding: 1.5% 6%;
-    background-color: #008A85;
-    border-radius: 8px;
-    text-decoration: none;
-    font-family: ZonaPro;
-    font-size: 1.5vw;
-    font-weight: bold;
-    transition-duration: 0.4s;
-  }
   
-  .reserva_button:hover {
-    background-color: #09bdb7;
-  }
-  
-  .row {
-    display: flex;
-  }
-  
-  .contenedor_caja {
-    width: 100%;
-    text-align: center;
-    display: flex;
-    flex-wrap: wrap;
-    margin-right: -15px;
-    margin-left: -15px;
-  }
-  
-  
-  /*Area of images*/
-  /*Animation activated by keyframes*/
-  
-  .newsletter {
-    position: relative;
-    margin: 5%;
-    background-color: #502F5D;
-    border: 5px solid #8B127D;
-  }
-  
-  .newsletter h3{
-    color: white;
-    font-family: ZonaPro;
-    text-align: left;
-    margin: 1% 2%;
-  }
-  .form_container {
-    float: center;
-    width: 100%;
-  }
-  
-  input[type=text] {
-    width: 26%;
-    padding: 1%;
-    margin: 1% 2%;
-  }
-
-  .checkbox{
-    line-height: 30px;
-    margin-bottom: 3%;
-  }
-
-  .checkbox label{
-    font-family: ZonaPro;
-    font-size: 1vw;
-    color: white;
-  }
-  
-  .submit {
-    width: 100%;
-    text-align: left;
-  }
-  
-  input[type=submit] {
-    margin: 1% 2%; 
-    width: 40%;
-    padding: 1vw;
-    background-color: #008A85;
-    color: white;
-    border: none;
-    border-radius: 8px;
-    opacity: 1;
-    font-weight: bold;
-    transition-duration: 0.4s;
-  }
-  
-  input[type=submit]:hover {
-    background-color: #09bdb7;
-  }
-  
-  input[type=checkbox] {
-    transform: scale(1.5);
-    padding: 10px;
-    margin-left: 2%;
-  }
-  
-  .form_container label span {
-    font-family: ZonaPro;
-    font-size: 1vw;
-    color: white;
-  }
-  
-  
-  .aboutContainer{
+  .tabla_reservaciones{
     background-image: url(../img/Ulacit_Campus.jpg);
     background-size: cover;
     position: relative;
     width: 100%;
-    padding-top: 5%;
-    padding-bottom: 5%;
+    padding-top: 10%;
+    padding-bottom: 10%; 
+  }
+  
+  table{
+    margin: auto;
+    width: 80%; 
+    border-collapse: collapse;
+    
+  }
+
+  table th{
+    color:white;
+    font-family: ZonaProBOLD;
+    font-size: 3vh;
+    padding: 15px;
+    text-align: left;
+  }
+  
+  table tr:nth-child(even){
+    background-color: #31003fef; 
+    font-weight: 900;
+  }
+  table tr:nth-child(odd){
+    background-color: #502f5dec;
+    font-weight: 500;
+  }
+  table tr td {
+    font-family: ZonaPro;
+    padding: 15px;
+    text-align: left;
+    color: #dddddd;
+  
   }
   .footer{
       position: relative;
