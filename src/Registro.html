@@ -21,7 +21,7 @@
 <body>
     <div class="reservacion_img"></div>
     <div class="reservacion_form">
-        <form name="Reservacion" method="post"  action="../php/Registro.php">
+        <form name="Reservacion" method="post" action="../php/Registro.php">
             <div class="reservacion_form_top" >
                 <h1>Seleciona tu Parqueo</h1>
             </div>
@@ -42,9 +42,6 @@
                         }
                         
                         $Fecha = $_SESSION['Fecha'];
-                        
-                        echo "<script>console.log($Fecha)</script>";
-                        echo "<script>console.log('hola')</script>";
 
                         $sql = "SELECT Espacio FROM `dbo.parqueo` WHERE Espacio NOT IN (SELECT Espacio FROM `dbo.reservacion` WHERE Fecha = '$Fecha')";
 

@@ -2,6 +2,8 @@
 session_start();
 // database connection code
 include 'connection.php';
+
+//open connection
 $conn = OpenCon();
 if (!$conn) {
     die("Connection failed: " . mysqli_connect_error());
@@ -19,13 +21,15 @@ $Fecha = $_SESSION['Fecha'];
 $Hora = $_SESSION['Hora'];
 // get post records
 $numEspacio = $_POST['numEspacio'];
-
+$_SESSION['numEspacio'] = $numEspacio;
+// generar nombre completo
+$txtNombreCompleto = $txtNombre . " " . $txtApellido;
 // check si existe ya el usuario
 
 $foundID = false;
 $foundplaca = false;
 
-$sqlinsert1 = "INSERT INTO `dbo.persona` (ID_Persona, Nombre, Correo, Telefono) VALUES ('$numCedula', '$txtNombre', '$txtEmail', '$numTelefono')";
+$sqlinsert1 = "INSERT INTO `dbo.persona` (ID_Persona, Nombre, Correo, Telefono) VALUES ('$numCedula', '$txtNombreCompleto', '$txtEmail', '$numTelefono')";
 $sqlinsert3 = "INSERT INTO `dbo.vehiculo` (Placa, Marca, ID_Persona, Color) VALUES ('$numPlaca', '$txtMarca', '$numCedula', '$txtColor')";
 $sqlinsert4 = "INSERT INTO `dbo.reservacion` (ID_Persona, Placa, Espacio, Fecha, Hora) VALUES ('$numCedula', '$numPlaca', '$numEspacio', '$Fecha', '$Hora')";
 
@@ -37,7 +41,7 @@ if (mysqli_num_rows($result) > 0) {
     // output data of each row
 
     while($row = mysqli_fetch_assoc($result)) {
-        if ($row["ID_Persona"] == $numCedula && $row["Nombre"] == $txtNombre) {
+        if ($row["ID_Persona"] == $numCedula && $row["Nombre"] == $txtNombreCompleto) {
 
             //usuario existente
             $foundID = true;
@@ -86,15 +90,14 @@ if (mysqli_num_rows($result) > 0) {
   echo "<script>alert('No hay registros');</script>";
 }
 
+// close connection
 $conn->close();
 
-
+//error reports
 ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
-
-header("Location: ../src/Grupo04.html");
-
+header("Location: ../src/gracias.html");
 die();
 
 ?>
