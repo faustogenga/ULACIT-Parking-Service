@@ -39,7 +39,7 @@
         echo "<table><tr><th>#</th><th>Id_Persona</th><th>Placa</th><th>Espacio</th><th>Fecha</th><th>Hora</th></tr>";
         // output data of each row
         while($row = $result->fetch_assoc()) {
-            echo "<tr><td>".$row["ID_Reservacion"]."</td><td>".$row["ID_Persona"]."</td></td><td>".$row["Placa"]."</td></td><td>".$row["Espacio"]."</td></td><td>".$row["Fecha"]."</td><td>".$row["Fecha"]."</td></tr>";
+            echo "<tr><td>".$row["ID_Reservacion"]."</td><td>".$row["ID_Persona"]."</td></td><td>".$row["Placa"]."</td></td><td>".$row["Espacio"]."</td></td><td>".$row["Fecha"]."</td><td>".$row["Hora"]."</td></tr>";
         }
         echo "</table>";
         } else {
