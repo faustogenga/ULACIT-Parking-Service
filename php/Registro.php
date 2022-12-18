@@ -53,7 +53,7 @@ if (mysqli_num_rows($result) > 0) {
             while($row2 = mysqli_fetch_assoc($result2)) {
                 
                 if ($row2["Placa"] == $numPlaca) {
-                    //placa existente, insertar reservacion y parqueo
+                    //placa existente, insertar reservacion
                     $foundplaca = true;
 
                     mysqli_query($conn, $sqlinsert4);  
@@ -61,14 +61,14 @@ if (mysqli_num_rows($result) > 0) {
             }
 
             if ($foundplaca == false) {
-                //placa no existente, insertar vehiculo, reservacion y parqueo
+                //placa no existente, insertar vehiculo, reservacion 
                 mysqli_query($conn, $sqlinsert3);
                 mysqli_query($conn, $sqlinsert4);
             }
         }
     }
     if ($foundID == false) {
-        //Usuario no existente, insertar persona, vehiculo, reservacion y parqueo
+        //Usuario no existente, insertar persona, vehiculo, reservacion 
         if ($conn->query($sqlinsert1) === TRUE) {
             echo "reservation";
           } else {

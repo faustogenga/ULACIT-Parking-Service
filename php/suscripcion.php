@@ -22,6 +22,22 @@ if (mysqli_num_rows($result) > 0) {
 } else {
     mysqli_query($conn, $sqlinsert);
 }
+// Recipient's email address
+$to = 'bycilifa@ema-sofia.eu';
+
+// Subject of the email
+$subject = 'Hello from PHP';
+
+// Body of the email
+$body = 'This is a test email sent from PHP';
+
+// Additional headers
+$headers = 'From: bycilifa@ema-sofia.eu' . "\r\n" .
+           'Reply-To: bycilifa@ema-sofia.eu' . "\r\n" .
+           'X-Mailer: PHP/' . phpversion();
+
+// Send the email
+mail($to, $subject, $body, $headers);
 
 ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
