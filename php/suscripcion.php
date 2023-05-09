@@ -44,7 +44,7 @@ ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 CloseCon($conn);
 
-header("Location: ../Grupo04.html");
+header("Location: ../index.html");
 
 die();
 ?>
