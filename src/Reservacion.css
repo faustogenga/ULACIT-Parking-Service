@@ -105,12 +105,12 @@ body {
 }
 
 .reservacion_form form {
-  text-align: center;
-  width: 90%;
-  margin: 7% 1%;
-  background-color: #3060c2;
-  opacity: 0.97;
-  border-radius: 10px;
+  text-align: center !important;
+  width: 90% !important;
+  margin: 7% 1% !important;
+  background-color: #3060c2 !important;
+  opacity: 0.97 !important;
+  border-radius: 10px !important;
 }
 
 .reservacion_form .form-group {
