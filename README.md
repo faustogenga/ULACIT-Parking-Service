@@ -5,6 +5,9 @@
 **Download and set up the database locally using our SQL files, and make the necessary changes to the connection in the connection.php file.**
 
 ## Currently Hosted in Netlify
+Designed a Parking Reservation Website prototype for college using JavaScript, HTML, CSS, PHP, and SQL Server.
+Hosted on Netlify for visualization, the project allows users to reserve parking spots, highlighting my proficiency in full-stack development and creating a practical and user-friendly solution.
+
 Front-End hosted in Netlify with the reservation form connected to Netlify forms just as a visual test / prototype. 
 Project provides all php and sql files in order to run with a local database, as intended.
 
