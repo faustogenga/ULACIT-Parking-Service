@@ -16,17 +16,7 @@ All resources are used for learning / school related purposes. \
 
 
 **`Owner`** : \
-Fausto Genga : *80 commits    27,617 ++    3,807 --* \
+faustogenga : *51 commits  6,687 ++    2,208 --*\
 **`Contributors`** : \
-aemersonm : *15 commits    816 ++    347 --* \
-Espaba : *12 commits    1,047 ++    454 --* \
-Apolo-Git : *3 commits    445 ++    39 --* \
-
-## Project Requierments :
-Functional Requirements of 
-### Data stored in Cloud Firestore.
-## Available Scripts
-In the project directory, you can run:
-### `npm start`
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+AlonsoPadilla: *7 commits    478 ++    36 --*\
+Espaba: *4 commits    217 ++    13 --*\
