@@ -1,5 +1,5 @@
 # ULACIT Parking Service
-## https://parqueoulacit.netlify.app
+## https://ulacitparking.netlify.app/
 ## Parking Reservation Website - HTML/JS/CSS/PHP/SQL
 
 \Download and set up the database locally using our SQL files, and make the necessary changes to the connection in the connection.php file.**
