@@ -2,7 +2,7 @@
 ## https://ulacitparking.netlify.app/
 ## Parking Reservation Website - HTML/JS/CSS/PHP/SQL
 
-\Download and set up the database locally using our SQL files, and make the necessary changes to the connection in the connection.php file.**
+**Download and set up the database locally using our SQL files, and make the necessary changes to the connection in the connection.php file.**
 
 ## Currently Hosted in Netlify
 Front-End hosted in Netlify with the reservation form connected to Netlify forms just as a visual test / prototype. 
