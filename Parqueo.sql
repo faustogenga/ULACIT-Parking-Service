@@ -1,0 +1,21 @@
+USE [Parqueo_ULACIT]
+GO
+
+/****** Object:  Table [dbo].[Parqueo]    Script Date: 12/5/2022 5:36:35 PM ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[Parqueo](
+	[Espacio] [int] NOT NULL,
+	[Tipo_Seguridad] [varchar](50) NULL,
+	[Disponibilidad] [char](10) NOT NULL,
+ CONSTRAINT [PK_1] PRIMARY KEY CLUSTERED 
+(
+	[Espacio] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+

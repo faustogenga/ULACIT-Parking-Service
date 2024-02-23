@@ -1,0 +1,22 @@
+USE [Parqueo_ULACIT]
+GO
+
+/****** Object:  Table [dbo].[Persona]    Script Date: 12/5/2022 5:36:43 PM ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[Persona](
+	[ID_Persona] [bigint] NOT NULL,
+	[Nombre] [varchar](50) NOT NULL,
+	[Correo] [varchar](50) NOT NULL,
+	[Telefono] [int] NOT NULL,
+ CONSTRAINT [PK_2] PRIMARY KEY CLUSTERED 
+(
+	[ID_Persona] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+
