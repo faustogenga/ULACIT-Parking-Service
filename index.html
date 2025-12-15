@@ -1,24 +1,25 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Parqueo ULACIT</title>
-    <link rel ="stylesheet" href="src/index.css">
+    <meta name="description" content="Sistema de reservación de parqueo ULACIT - Reserva tu espacio de estacionamiento de manera rápida y gratuita">
+    <title>Parqueo ULACIT - Sistema de Reservación</title>
+    <link rel="stylesheet" href="src/index.css">
+</head>
 
-
+<body>
 <header>
-  <div class="topmenu">
+  <nav class="topmenu">
     <a class="home" href="index.html">Inicio</a>
-    <a href="https://www.ulacit.ac.cr/" target="_blank">ULACIT</a>
+    <a href="https://www.ulacit.ac.cr/" target="_blank" rel="noopener">ULACIT</a>
     <a href="src/Contacto.html">Contacto</a>
     <a href="src/Preguntas.html">Preguntas Frecuentes</a>
-    <a href="src/Reservacion.html">Reservacion</a>
+    <a href="src/Reservacion.html">Reservación</a>
     <a href="src/login.html">Admin</a>
     <img class="logo_ulacit" src="img/logo_ulacit.png" alt="Logo ULACIT">
-  </div>
-  <div class="borde">
-  </div>
+  </nav>
+  <div class="borde"></div>
 </header>
 
 <div class="front">
@@ -26,11 +27,9 @@
   <img src="img/background Fronttext.png" alt="Imagen de autos parqueados">
 </div>
 <div class="borde"></div>
-
-<body>
 <main>
   <div class="reserva">
-    <a class="reserva_button" href="src/Reservacion.html" alt="Reserva tu espacio"> Reservacion</a>
+    <a class="reserva_button" href="src/Reservacion.html" aria-label="Reserva tu espacio de estacionamiento">Reservación</a>
   </div>
   <div class="row">  
     <div class="contenedor_imagen">
@@ -48,8 +47,8 @@
         <h3>Encuentra tu parqueo</h3>
         <p>Reserva tu lugar en el parqueo #4 de la universidad.</p>
         <h3>100% gratuito</h3>
-        <p>Unicamente para integrantes de la universidad.</p>
-        <h3>Rapido</h3>
+        <p>Únicamente para integrantes de la universidad.</p>
+        <h3>Rápido</h3>
         <p>Presenta el comprobante al llegar al parqueo.</p>
       </div>
       <div class="informacion_contenido_icono_parqueo">
@@ -59,55 +58,56 @@
     </div>
   </div>
 
-  <div class="newsletter">
-    <form method="post"  action="php/suscripcion.php">
+  <section class="newsletter">
+    <form method="post" action="php/suscripcion.php">
       <h3>Recibe todas las actualizaciones del parqueo</h3>
-      <input name="txtNombre" type="text" placeholder="Ingresar primer nombre" required>
-      <input name="txtEmail"  type="email" placeholder="Ingresar correo electronico" required>
+      <input name="txtNombre" type="text" placeholder="Ingresar primer nombre" required aria-label="Primer nombre">
+      <input name="txtEmail" type="email" placeholder="Ingresar correo electrónico" required aria-label="Correo electrónico">
         <br>
         <label>
-          <input type="checkbox"  name="subcribirse" required>
-          <span>He leído y acepto la <a href="https://www.ulacit.ac.cr/politica-de-datos/" target="_blank">Política de Privacidad</a></span>
+          <input type="checkbox" name="suscribirse" required>
+          <span>He leído y acepto la <a href="https://www.ulacit.ac.cr/politica-de-datos/" target="_blank" rel="noopener">Política de Privacidad</a></span>
         </label>
         <div class="submit">
-          <input type="submit" value="Subscribirse">
+          <input type="submit" value="Suscribirse">
         </div>
     </form>
-  </div>
+  </section>
 </main>
 
-<div class="footer">
+<footer class="footer">
   <div>
       <h3>Sitios</h3>
       <ul>
           <li>
               <p class="icons">q</p>
-              <a href="https://www.ulacit.ac.cr/" target="_blank">Página ULACIT</a>                
+              <a href="https://www.ulacit.ac.cr/" target="_blank" rel="noopener">Página ULACIT</a>                
           </li>
           <li>
               <p class="icons">f</p>
-              <a href="https://www.facebook.com/ulacitcostarica/" target="_blank">Facebook</a> 
+              <a href="https://www.facebook.com/ulacitcostarica/" target="_blank" rel="noopener">Facebook</a> 
           </li>
           <li>
               <p class="icons">c</p>
-              <a href="https://www.instagram.com/ulacitcr/" target="_blank">Instagram</a>
+              <a href="https://www.instagram.com/ulacitcr/" target="_blank" rel="noopener">Instagram</a>
           </li>
       </ul>
   </div>  
   <div> 
       <h3>ULACIT Parking</h3>
-      <ul style="margin: 15px; padding: 5px;">
+      <ul>
           <li>
               <a href="index.html">Inicio</a>
           </li>
           <li>
-              <a href="src/contacto.html">Contacto</a>
+              <a href="src/Contacto.html">Contacto</a>
           </li>
           <li>
               <a href="src/Preguntas.html">Preguntas Frecuentes</a>
           </li>
       </ul>
   </div>      
+</footer>
 
 </body>
 </html>
