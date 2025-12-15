@@ -1,5 +1,14 @@
 /* Hoja de estilos principal*/
 
+/* Global Styles */
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
 /*fonts*/
 @font-face {
   font-family: ZonaProBOLD;
@@ -19,41 +28,76 @@
 
 /*Navigation bar*/
 .topmenu {
-  background-color: #31003F;
+  background: linear-gradient(135deg, #31003F 0%, #502F5D 100%);
   overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  backdrop-filter: blur(10px);
 }
 .topmenu a {
   float: left;
   color: #f2f2f2;
   text-align: center;
   font-family: ZonaPro;
-  padding: 1% 1%;
+  padding: 1.2% 1.5%;
   text-decoration: none;
-  font-size: 15px;
-  transition-duration: 0.7s;
+  font-size: 16px;
+  transition: all 0.3s ease;
+  position: relative;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+}
+.topmenu a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #de8518, #ffb347);
+  transform: translateX(-50%);
+  transition: width 0.3s ease;
 }
 /*hover */
 .topmenu a:hover {
-  background-color: #dddddd;
-  color: #31003F;
-  font-weight:700;
+  background-color: rgba(221, 221, 221, 0.1);
+  color: #ffb347;
+  transform: translateY(-2px);
+}
+.topmenu a:hover::after {
+  width: 80%;
 }
 /*home activado */
 .topmenu a.home {
-  background-color: #de8518;
+  background: linear-gradient(135deg, #de8518, #ffb347);
   color: white;
+  border-radius: 4px;
+  margin: 0.3% 0.5%;
+  padding: 1% 1.5%;
+  box-shadow: 0 2px 8px rgba(222, 133, 24, 0.4);
+}
+.topmenu a.home:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(222, 133, 24, 0.6);
 }
 .logo_ulacit {
   float: right;
-  margin: 0.1% 2%;
+  margin: 0.3% 2%;
   width: 9%;
+  transition: transform 0.3s ease;
+}
+.logo_ulacit:hover {
+  transform: scale(1.05);
 }
 
 .borde {
   position: relative;
   width: 100%;
-  height: 2px;
-  background-color: #de8518;
+  height: 3px;
+  background: linear-gradient(90deg, #de8518, #ffb347, #de8518);
+  box-shadow: 0 2px 8px rgba(222, 133, 24, 0.5);
 }
 
 /*FRENTE Parqueo ULACIT
@@ -66,11 +110,23 @@
   font-family: ZonaProBOLD;
   text-align: center;
   width: 100%;
+  position: relative;
+}
+.front::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(180deg, rgba(49, 0, 63, 0.3) 0%, rgba(49, 0, 63, 0.1) 50%, rgba(49, 0, 63, 0.3) 100%);
+  pointer-events: none;
 }
 .front img{
   position: relative;
 	width: 100%;
   margin-bottom: -1%;
+  filter: brightness(1.05) contrast(1.1);
 }
 .front h1 { 
   width: 100%;
@@ -78,40 +134,73 @@
   font-size: 6vw;
   line-height: .8;
   color: #502F5D;
+  text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.3), 0 0 20px rgba(255, 255, 255, 0.5);
+  letter-spacing: 2px;
+  z-index: 10;
 }
 .front h1 span{
   font-family: ZonaPro;
   display: block;
   font-size: 3vw;
+  letter-spacing: 8px;
+  margin-top: 10px;
 }
 body {
   margin: auto;
+  font-family: ZonaPro, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  line-height: 1.6;
 }
 /*texto*/ 
 main {
-  padding: 2% 2%;
+  padding: 3% 4%;
   text-align: center;
   position: relative; 
   background: #fff;
   background-image: url(../img/Ulacit_Campus_bright.jpg);
   background-size: contain;
+  background-attachment: fixed;
 }
 .reserva_button {
   position: relative;
   margin: auto;
+  display: inline-block;
   color: white;
-  padding: 1.5% 6%;
-  background-color: #008A85;
-  border-radius: 8px;
+  padding: 1.8% 7%;
+  background: linear-gradient(135deg, #008A85, #0ac4be);
+  border-radius: 50px;
   text-decoration: none;
   font-family: ZonaPro;
   font-size: 1.5vw;
   font-weight: bold;
-  transition-duration: 0.4s;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 6px 20px rgba(0, 138, 133, 0.4);
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  overflow: hidden;
+}
+
+.reserva_button::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.3);
+  transform: translate(-50%, -50%);
+  transition: width 0.6s, height 0.6s;
 }
 
 .reserva_button:hover {
-  background-color: #09bdb7;
+  background: linear-gradient(135deg, #09bdb7, #0dd9d2);
+  transform: translateY(-3px);
+  box-shadow: 0 10px 30px rgba(0, 138, 133, 0.6);
+}
+
+.reserva_button:hover::before {
+  width: 300px;
+  height: 300px;
 }
 
 .row {
@@ -133,9 +222,15 @@ main {
   width: 35%;
   position: relative;
   overflow: hidden;
-  border: 10px solid #502F5D;
-  border-radius: 8px;
-  box-shadow: -1px 1px 5px #502F5D;
+  border: 3px solid #502F5D;
+  border-radius: 20px;
+  box-shadow: 0 15px 40px rgba(80, 47, 93, 0.4), 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contenedor_imagen:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 50px rgba(80, 47, 93, 0.5), 0 10px 20px rgba(0, 0, 0, 0.15);
 }
 
 /*Area of images*/
@@ -181,19 +276,38 @@ main {
   margin: 3% 1% 1% 5%;
 }
 .informacion h1{
-  padding: 1% 1%;
+  padding: 1.5% 2%;
   font-family: ZonaPro;
   font-size: 35px;
   font-weight: 800;
   width: 100%;
   color: white;
-  background-color: #502F5D;
-  border: 8px solid #8B127D;
+  background: linear-gradient(135deg, #502F5D, #6d3d7f);
+  border: none;
+  border-radius: 15px 15px 0 0;
+  box-shadow: 0 8px 20px rgba(80, 47, 93, 0.3);
+  letter-spacing: 1px;
+  position: relative;
+  overflow: hidden;
+}
+
+.informacion h1::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(90deg, #de8518, #ffb347, #de8518);
 }
 
 .informacion_contenido {
   display: flex;
   width: 100%;
+  background: white;
+  border-radius: 0 0 15px 15px;
+  padding: 2%;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
 }
 
 .informacion_contenido_texto {
@@ -208,14 +322,29 @@ main {
 .informacion_contenido_texto h3{
   font-family: ZonaPro;
   text-align: left;
-  font-size: 25px;
+  font-size: 26px;
+  font-weight: 700;
+  color: #502F5D;
+  position: relative;
+  padding-left: 15px;
 }
+
+.informacion_contenido_texto h3::before {
+  content: '●';
+  position: absolute;
+  left: 0;
+  color: #de8518;
+  font-size: 20px;
+}
+
 .informacion_contenido_texto p{
   font-family: ZonaPro;
-  font-weight: 700;
+  font-weight: 600;
   text-align: left;
   color: rgb(77, 77, 77);
-  font-size: 20px;
+  font-size: 18px;
+  line-height: 1.8;
+  padding-left: 15px;
 }
 
 .informacion_contenido_icono_parqueo{
@@ -232,41 +361,105 @@ main {
 
 .newsletter {
   text-align: left;
-  margin-top: 2%;
-  padding-bottom: 10%;
-  background-color: #502F5D;
-  border: 5px solid #8B127D;
+  margin-top: 5%;
+  margin-bottom: 3%;
+  padding: 3% 4%;
+  background: linear-gradient(135deg, #502F5D 0%, #6d3d7f 100%);
+  border: none;
+  border-radius: 20px;
   width: 100%;
+  box-shadow: 0 15px 40px rgba(80, 47, 93, 0.4);
+  position: relative;
+  overflow: hidden;
+}
+
+.newsletter::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  right: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
+  animation: pulse 15s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { transform: scale(1); opacity: 0.5; }
+  50% { transform: scale(1.1); opacity: 0.3; }
 }
 
 .newsletter h3{
   color: white;
   font-family: ZonaPro;
   text-align: left;
-  margin: 1% 2%;
+  margin: 1% 2% 2% 2%;
+  font-size: 24px;
+  font-weight: 700;
+  position: relative;
+  z-index: 1;
+  letter-spacing: 0.5px;
 }
 
 input[type=text] {
   float: left;
-  width: 20%;
-  padding: 1%;
+  width: 22%;
+  padding: 1.2%;
   margin: 1% 2%;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.95);
+  font-family: ZonaPro;
+  font-size: 16px;
+  transition: all 0.3s ease;
+  position: relative;
+  z-index: 1;
+}
+
+input[type=text]:focus {
+  outline: none;
+  border-color: #de8518;
+  box-shadow: 0 0 15px rgba(222, 133, 24, 0.4);
+  transform: translateY(-2px);
 }
 
 input[type=email]{
   float: left;
-  width: 20%;
-  padding: 1%;
+  width: 22%;
+  padding: 1.2%;
   margin: 1% 2%;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.95);
+  font-family: ZonaPro;
+  font-size: 16px;
+  transition: all 0.3s ease;
+  position: relative;
+  z-index: 1;
+}
+
+input[type=email]:focus {
+  outline: none;
+  border-color: #de8518;
+  box-shadow: 0 0 15px rgba(222, 133, 24, 0.4);
+  transform: translateY(-2px);
 }
 
 .newsletter form label{
   font-family: ZonaPro;
-  font-size: 60%;
+  font-size: 14px;
   color: white;
+  position: relative;
+  z-index: 1;
 }
 .newsletter form label a{
-  color: white;
+  color: #ffb347;
+  text-decoration: underline;
+  transition: color 0.3s ease;
+}
+
+.newsletter form label a:hover {
+  color: #de8518;
 }
 
 .submit {
@@ -276,33 +469,50 @@ input[type=email]{
 }
 
 input[type=submit] {
-  margin: 1% 2%;
+  margin: 2% 2%;
   float: left;
-  width: 20%;
-  padding: 1vw;
-  background-color: #008A85;
+  width: 22%;
+  padding: 1.2vw;
+  background: linear-gradient(135deg, #008A85, #0ac4be);
   color: white;
   border: none;
-  border-radius: 8px;
+  border-radius: 12px;
   opacity: 1;
   font-weight: bold;
-  transition-duration: 0.4s;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 6px 20px rgba(0, 138, 133, 0.4);
+  position: relative;
+  z-index: 1;
+  letter-spacing: 0.5px;
 }
 
 input[type=submit]:hover {
-  background-color: #09bdb7;
+  background: linear-gradient(135deg, #09bdb7, #0dd9d2);
+  transform: translateY(-3px);
+  box-shadow: 0 10px 30px rgba(0, 138, 133, 0.6);
+}
+
+input[type=submit]:active {
+  transform: translateY(-1px);
 }
 
 input[type=checkbox] {
   transform: scale(1.5);
   padding: 10px;
   margin-left: 2%;
+  cursor: pointer;
+  position: relative;
+  z-index: 1;
 }
 
 .newsletter label span {
   font-family: ZonaPro;
-  font-size: 1vw;
+  font-size: 14px;
   color: white;
+  position: relative;
+  z-index: 1;
 }
 
 
@@ -348,44 +558,74 @@ table tr td {
 .footer{
     position: relative;
     display: inline-flex;
-    background-color: #31003F;
+    background: linear-gradient(135deg, #31003F 0%, #502F5D 100%);
     width: 100%;
     display: flex;  
     justify-content: center;
-    padding-top: 5px;
-    padding-bottom: 5px;
+    padding-top: 30px;
+    padding-bottom: 30px;
     font-family: ZonaPro;
+    box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.3);
 }
 .footer div{
   width:  10%;
-  margin: 5px;
-  padding: 10px;
+  margin: 10px;
+  padding: 15px;
 }
 .footer div h3{
   text-align: center;
   color: #dddddd;
   font-weight: 900;
+  font-size: 20px;
+  margin-bottom: 15px;
+  position: relative;
+  padding-bottom: 10px;
+  letter-spacing: 1px;
 }
+
+.footer div h3::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50px;
+  height: 3px;
+  background: linear-gradient(90deg, #de8518, #ffb347);
+  border-radius: 2px;
+}
+
 .footer ul{
   list-style: none;
   margin-left: -45px;
   color: #dddddd;
 }
 .footer ul li {
-  margin-bottom: 10px;
+  margin-bottom: 12px;
+  transition: transform 0.3s ease;
 }
+
+.footer ul li:hover {
+  transform: translateX(5px);
+}
+
 .footer ul li p{
   display: inline-flex;
   margin: 2px;
+  font-size: 18px;
 }
 .footer ul li a{
   color: #dddddd;
   text-decoration: none;
+  transition: color 0.3s ease;
+  font-size: 15px;
 }
 .footer ul li a:hover{
+  color: #ffb347;
   font-weight: bolder;
 }
 .icons{
   font-family: socialMedia;
+  color: #de8518;
 }
 
