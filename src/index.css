@@ -41,7 +41,8 @@ html {
   position: sticky;
   top: 0;
   z-index: 1000;
-  backdrop-filter: blur(10px);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
 }
 .topmenu a {
   float: left;
@@ -409,8 +410,8 @@ main {
 }
 
 @keyframes pulse {
-  0%, 100% { transform: scale(1); opacity: 0.5; }
-  50% { transform: scale(1.1); opacity: 0.3; }
+  0%, 100% { transform: scale3d(1, 1, 1); opacity: 0.5; }
+  50% { transform: scale3d(1.1, 1.1, 1); opacity: 0.3; }
 }
 
 .newsletter h3{
