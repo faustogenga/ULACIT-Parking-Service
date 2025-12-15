@@ -33,12 +33,7 @@
   </div>
   <div class="row">  
     <div class="contenedor_imagen">
-       <div class="wrapper">
-          <img class="slideshow" src="img/Parqueo.jpg">
-          <img class="slideshow" src="img/Parqueo2.jpg">
-          <img class="slideshow" src="img/parqueo3.jpg">
-          <img class="slideshow" src="img/parqueo4.jpg">
-       </div>
+       <img src="img/Parqueo.jpg" alt="Parqueo ULACIT">
     </div>
     <div class="informacion">
       <h1>No te quedes sin campo</h1>
@@ -61,16 +56,21 @@
   <section class="newsletter">
     <form method="post" action="php/suscripcion.php">
       <h3>Recibe todas las actualizaciones del parqueo</h3>
-      <input name="txtNombre" type="text" placeholder="Ingresar primer nombre" required aria-label="Primer nombre">
-      <input name="txtEmail" type="email" placeholder="Ingresar correo electrónico" required aria-label="Correo electrónico">
-        <br>
-        <label>
-          <input type="checkbox" name="suscribirse" required>
-          <span>He leído y acepto la <a href="https://www.ulacit.ac.cr/politica-de-datos/" target="_blank" rel="noopener">Política de Privacidad</a></span>
-        </label>
-        <div class="submit">
-          <input type="submit" value="Suscribirse">
+      <div class="form-row">
+        <div class="input-group">
+          <input name="txtNombre" type="text" placeholder="Ingresar primer nombre" required aria-label="Primer nombre">
         </div>
+        <div class="input-group">
+          <input name="txtEmail" type="email" placeholder="Ingresar correo electrónico" required aria-label="Correo electrónico">
+        </div>
+      </div>
+      <label>
+        <input type="checkbox" name="suscribirse" required>
+        <span>He leído y acepto la <a href="https://www.ulacit.ac.cr/politica-de-datos/" target="_blank" rel="noopener">Política de Privacidad</a></span>
+      </label>
+      <div class="submit">
+        <input type="submit" value="Suscribirse">
+      </div>
     </form>
   </section>
 </main>
